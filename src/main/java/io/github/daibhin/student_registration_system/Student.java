@@ -8,10 +8,11 @@ public class Student {
 	private Date dob;
 	private int id;
 
-	public Student(String name, int age, Date dob) {
+	public Student(String name, int age, Date dob, int id) {
 		this.name = name;
 		this.age = age;
 		this.dob = dob;
+		this.id = id;
 	}
 	
 	public String getUsername() {
