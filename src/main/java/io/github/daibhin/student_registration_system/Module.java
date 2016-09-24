@@ -25,7 +25,7 @@ public class Module {
 		return students;
 	}
 	
-	public void addStudent(Student student) {
-		this.students.add(student);
+	public void addStudents(ArrayList<Student> students) {
+		this.students.addAll(students);
 	}
 }

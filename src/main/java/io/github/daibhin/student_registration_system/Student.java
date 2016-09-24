@@ -1,23 +1,20 @@
 package io.github.daibhin.student_registration_system;
 
 import java.util.ArrayList;
-import java.util.Date;
+
+import org.joda.time.LocalDate;
 
 public class Student {
 	private String name;
 	private int age;
-	private Date dob;
+	private LocalDate dob;
 	private int id;
-	private ArrayList<Module> modules;
-	private CourseProgramme course;
 
-	public Student(String name, int age, Date dob, int id, CourseProgramme course) {
+	public Student(String name, int age, LocalDate dob, int id) {
 		this.name = name;
 		this.age = age;
 		this.dob = dob;
 		this.id = id;
-		this.course = course;
-		this.modules = new ArrayList<Module>();
 	}
 	
 	public String getUsername() {
@@ -40,11 +37,11 @@ public class Student {
 		this.age = age;
 	}
 
-	public Date getDob() {
+	public LocalDate getDateOfBirth() {
 		return dob;
 	}
 
-	public void setDob(Date dob) {
+	public void setDateOfBirth(LocalDate dob) {
 		this.dob = dob;
 	}
 	
@@ -56,8 +53,14 @@ public class Student {
 		this.id = id;
 	}
 	
-	public void addToModule(Module module) {
-		module.addStudent(this);
-		this.modules.add(module);
+	public ArrayList<Module> getModules(ArrayList<Module> modules) {
+		ArrayList<Module> studentModules = new ArrayList<Module>();
+		for (int i=0; i< modules.size(); i++) {
+			Module module = modules.get(i);
+			if (module.getStudents().contains(this)) {
+				studentModules.add(module);
+			}
+		}
+		return studentModules;
 	}
 }
