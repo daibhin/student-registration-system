@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import org.joda.time.LocalDate;
 
 public class CourseProgramme {
-	public String name;
-	public ArrayList<Module> modules;
-	public LocalDate startDate;
-	public LocalDate endDate;
+	private String name;
+	private ArrayList<Module> modules;
+	private LocalDate startDate;
+	private LocalDate endDate;
 	
 	public CourseProgramme(String name,
 						   ArrayList<Module> modules,
