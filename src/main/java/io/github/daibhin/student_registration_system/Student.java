@@ -9,6 +9,7 @@ public class Student {
 	private int age;
 	private LocalDate dob;
 	private int id;
+	private CourseProgramme course;
 
 	public Student(String name, int age, LocalDate dob, int id) {
 		this.name = name;
@@ -53,14 +54,11 @@ public class Student {
 		this.id = id;
 	}
 	
-	public ArrayList<Module> getModules(ArrayList<Module> modules) {
-		ArrayList<Module> studentModules = new ArrayList<Module>();
-		for (int i=0; i< modules.size(); i++) {
-			Module module = modules.get(i);
-			if (module.getStudents().contains(this)) {
-				studentModules.add(module);
-			}
-		}
-		return studentModules;
+	public CourseProgramme getCourse() {
+		return this.course;
+	}
+	
+	public void enroll(CourseProgramme course) {
+		this.course = course;
 	}
 }

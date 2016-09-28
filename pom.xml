@@ -26,4 +26,11 @@
 	  <version>2.9.4</version>
 	</dependency>
   </dependencies>
+  
+  <distributionManagement>  
+    <repository>
+        <id>dropbox-mvn-repo</id>
+        <url>file:///Users/David/Dropbox/MavenDropboxRepository/</url>
+    </repository>
+</distributionManagement>  
 </project>
