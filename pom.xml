@@ -4,7 +4,7 @@
 
   <groupId>io.github.daibhin</groupId>
   <artifactId>student-registration-system</artifactId>
-  <version>1.3</version>
+  <version>1.4</version>
   <packaging>jar</packaging>
 
   <name>student-registration-system</name>
